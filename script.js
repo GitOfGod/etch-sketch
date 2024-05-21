@@ -8,7 +8,11 @@ function createDiv(className) {
 
 for (let rows = 0; rows < 16; rows++ ) {
     let div = createDiv("row");
-    console.log(div);
+    for (let columns = 0; columns < 16; columns++ ) {
+        let childDiv = createDiv("column");
+        div.appendChild(childDiv);
+    };
     container.appendChild(div);
+
 };
 
