@@ -5,3 +5,10 @@ function createDiv(className) {
     newDiv.classList.add(className);
     return newDiv;
 }
+
+for (let rows = 0; rows < 16; rows++ ) {
+    let div = createDiv("row");
+    console.log(div);
+    container.appendChild(div);
+};
+
