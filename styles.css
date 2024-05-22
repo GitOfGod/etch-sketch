@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+}
+
+.row {
+    background-color: orange;
+
+}
+
+.column {
+    background-color: red;
+}
