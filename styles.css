@@ -1,17 +1,18 @@
 .container {
     display: flex;
-    flex: 1;
+    flex-grow: 1;
+    border: 0.2px solid lightgrey;
 }
 
 .row {
-    background-color: orange;
-    margin: 1px;
+    border: 0.2px solid lightgrey;
 
 }
 
 .column {
-    background-color: red;
-    min-height: 5px;
-    min-width: 5px;
-    margin: 2px;
+    min-height: 10px;
+    min-width: 10px;
+    border: 0.2px solid lightgrey;
+
+
 }
