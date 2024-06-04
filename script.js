@@ -19,4 +19,13 @@ function createGrid(){
     }; 
 }
 
-createGrid();
+createGrid(); 
+
+
+window.addEventListener("DOMContentLoaded", (event) => {
+    const blocks = document.querySelectorAll(".container > .column > .row");
+    blocks.forEach( (block)  => {
+        block.addEventListener("mouseover", () => changeColour(block));
+    });
+
+});
