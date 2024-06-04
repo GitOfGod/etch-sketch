@@ -19,11 +19,13 @@ function createGrid(){
     }; 
 }
 
-
+// change block colour function
 function changeColour(block) {
     block.style.backgroundColor = "blue";
 
 }
+
+// function to change grid size
 
 createGrid(); 
 
@@ -35,3 +37,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
 
 });
+
+// gridSize event listener
+const gridSelector = document.querySelector("#gridSelector");
+gridSelector.addEventListener("click", changeGrid ());
