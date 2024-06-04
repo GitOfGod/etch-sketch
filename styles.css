@@ -2,7 +2,7 @@
     display: flex;
     width: 500px;
     height: 500px;
-    border: 1px solid black;
+    border: 1px solid blue;
 }
 
 .column {
@@ -11,8 +11,6 @@
     flex: 1;
     border: 0.1px solid lightgrey;
     box-sizing: border-box;
-
-
 }
 
 .row {
@@ -20,7 +18,14 @@
     flex: 1;
     border-top: 0.1px solid lightgrey;;
     box-sizing: border-box;
+}
 
-
-
+#gridSelector {
+    background-color: white;
+    border-color: blue;
+    border-radius: 3px;
+    padding: 10px 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
 }
