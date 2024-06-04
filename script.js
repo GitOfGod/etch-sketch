@@ -6,7 +6,23 @@ function createDiv(className) {
     return newDiv;
 }
 
-// Remember to substitute hardcoded iterator for function input gridSize
+// Change block colour function
+function changeColour(block) {   
+    block.style.backgroundColor = getRandomColour();
+
+}
+
+//Generate random RGB values
+function getRandomColour() {
+    let round = Math.floor;
+    let random = Math.random();
+    let max = 256;
+    let colour = `rgb(${round(random * max)}, ${round(random * max)}, ${round(random * max)})` 
+    return colour;
+}
+
+
+// Generate grid using user input or default
 function createGrid(size = 4){
     for (let columns = 0; columns < size; columns++ ) {
         let div = createDiv("column");
@@ -25,11 +41,6 @@ function createGrid(size = 4){
 
 }
 
-// change block colour function
-function changeColour(block) {
-    block.style.backgroundColor = "blue";
-
-}
 
 
 function removeGrid() {
