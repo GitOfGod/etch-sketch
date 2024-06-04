@@ -7,10 +7,10 @@ function createDiv(className) {
 }
 
 // Remember to substitute hardcoded iterator for function input gridSize
-function createGrid(){
-    for (let columns = 0; columns < 16; columns++ ) {
+function createGrid(size = 4){
+    for (let columns = 0; columns < size; columns++ ) {
         let div = createDiv("column");
-        for (let rows = 0; rows < 16; rows++ ) {
+        for (let rows = 0; rows < size; rows++ ) {
             let childDiv = createDiv("row");
             div.appendChild(childDiv);
         };
@@ -26,9 +26,14 @@ function changeColour(block) {
 }
 
 // function to change grid size
+function changeGridSize() {
+    let size = Number(prompt("Insert size of grid. This number needs to be less than 100"));
+    if (size > 0 && size <= 100) {
+        createGrid(size); 
+    }
+}
 
 createGrid(); 
-
 
 window.addEventListener("DOMContentLoaded", (event) => {
     const blocks = document.querySelectorAll(".container > .column > .row");
@@ -40,4 +45,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 // gridSize event listener
 const gridSelector = document.querySelector("#gridSelector");
-gridSelector.addEventListener("click", changeGridSize());
+gridSelector.addEventListener("click", () => changeGridSize);
+
+/*gridSelector.addEventListener("click", changeGridSize()); */
