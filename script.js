@@ -17,6 +17,12 @@ function createGrid(size = 4){
         container.appendChild(div);
     
     }; 
+    const blocks = document.querySelectorAll(".container > .column > .row");
+    blocks.forEach( (block)  => {
+        block.addEventListener("mouseover", () => changeColour(block));
+    });
+    
+
 }
 
 // change block colour function
@@ -44,16 +50,6 @@ function changeGridSize() {
 
 createGrid(); 
 
-window.addEventListener("DOMContentLoaded", (event) => {
-    const blocks = document.querySelectorAll(".container > .column > .row");
-    blocks.forEach( (block)  => {
-        block.addEventListener("mouseover", () => changeColour(block));
-    });
-
-});
-
 // gridSize event listener
 const gridSelector = document.querySelector("#gridSelector");
 gridSelector.addEventListener("click", () => changeGridSize());
-
-/*gridSelector.addEventListener("click", changeGridSize()); */
