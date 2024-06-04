@@ -25,10 +25,19 @@ function changeColour(block) {
 
 }
 
+
+function removeGrid() {
+    const columns = document.querySelectorAll(".container > .column");
+    columns.forEach( (column)  => {
+        column.remove();
+    })
+}
+
 // function to change grid size
 function changeGridSize() {
     let size = Number(prompt("Insert size of grid. This number needs to be less than 100"));
     if (size > 0 && size <= 100) {
+        removeGrid();
         createGrid(size); 
     }
 }
@@ -45,6 +54,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 // gridSize event listener
 const gridSelector = document.querySelector("#gridSelector");
-gridSelector.addEventListener("click", () => changeGridSize);
+gridSelector.addEventListener("click", () => changeGridSize());
 
 /*gridSelector.addEventListener("click", changeGridSize()); */
