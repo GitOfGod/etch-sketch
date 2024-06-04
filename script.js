@@ -19,6 +19,12 @@ function createGrid(){
     }; 
 }
 
+
+function changeColour(block) {
+    block.style.backgroundColor = "blue";
+
+}
+
 createGrid(); 
 
 
