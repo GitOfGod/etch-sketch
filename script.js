@@ -40,4 +40,4 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 // gridSize event listener
 const gridSelector = document.querySelector("#gridSelector");
-gridSelector.addEventListener("click", changeGrid ());
+gridSelector.addEventListener("click", changeGridSize());
